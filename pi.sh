@@ -47,6 +47,10 @@ echo "+) Installing octoxbps (xbps frontend)..."
 xbps-install -y octoxbps
 echo "+) Installing vim (text editor)..."
 xbps-install -y vim
+echo "+) Installing go (Go development tool)..."
+xbps-install -y go
+echo "+) Installing github-cli (GitHub CLI app)..."
+xbps-install -y github-cli
 
 echo "[*]: Cleaning up after installation..."
 echo "+) Setting up alsa and pipewire..."
