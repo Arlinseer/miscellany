@@ -13,6 +13,8 @@
  * 0: Preference test
  */
 
+user_pref("_here.it", "comes!");
+
 // [Section 1]: Enable internal privacy protection features.
 // privacy-rfp(2): Enable Firefox resistFingerprinting feature.
 user_pref("privacy.resistFingerprinting", true);
@@ -47,6 +49,7 @@ user_pref("toolkit.telemetry.server_owner", "");
 user_pref("toolkit.telemetry.previousBuildID", "");
 user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
 user_pref("toolkit.telemetry.unified", false);
+user_pref("toolkit.telemetry.enabled", false);
 // no-pingcentre-telemetry(2): Disable browser "ping centre" telemetry.
 user_pref("browser.ping-centre.telemetry", false);
 // no-activitystream-telemetry(2): Disable activity stream telemetry.
@@ -141,6 +144,9 @@ user_pref("captivedetect.canonicalURL", "");
 // no-addon-recommendations(2): Disable addons recommendations.
 user_pref("extensions.getAddons.showPane", false);
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
+// no-quick-suggestion(2): Disable "quick suggestions."
+user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
+user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
 
 // [Section 4]: Clean up mild annoyances.
 // no-default-sites(4): Unset default sites for new tab page.
@@ -166,6 +172,8 @@ user_pref("browser.preferences.moreFromMozilla", false);
 // no-middlemouse-opencblink(4): Prevent middle mouse click from opening copied
 // link.
 user_pref("middlemouse.contentLoadURL", false);
+// no-whatsnew(4): Disable what's new panel.
+user_pref("browser.messaging-system.whatsNewPanel.enabled", false);
 
 // [Section 5]: Enhance security.
 // no-disk-cache(1): Disable disk caching.
@@ -237,6 +245,8 @@ user_pref("dom.security.https_only_mode_send_http_background_request", false);
 // automatically-show-expert-badcert(3): Automatically show bad certificate
 // advanced error.
 user_pref("browser.xul.error_pages.expert_bad_cert", true);
+// no-shortcut-favicon(1): Disable favicon for shortcuts.
+user_pref("browser.shell.shortcutFavicons", false);
 
 // [Section 6]: Enable advanced features.
 // show-experimental(4): Show experimental features.
@@ -253,4 +263,4 @@ user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
 user_pref("devtools.debugger.remote-enabled", false);
 
 // pref-test(0): Test preference for syntax error.
-user_pref("_hello.world.2", "It... worked!");
+user_pref("_hello.world", "It... worked!");
