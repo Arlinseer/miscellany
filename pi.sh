@@ -24,27 +24,25 @@ echo "[*]: Installing low-level packages..."
 echo "+) Installing audio and video packages..."
 xbps-install -y pipewire alsa-pipewire alsa-utils xorg-minimal \
 	xorg-input-drivers xorg-video-drivers noto-fonts-ttf \
-	noto-fonts-cjk noto-fonts-emoji font-hermit-otf
+	noto-fonts-cjk noto-fonts-emoji font-go-ttf
 echo "+) Installing networking and fetching utilities..."
 xbps-install -y NetworkManager curl wget
 echo "+) Installing elogind..."
 xbps-install -y elogind
 echo "+) Installing archive compression/extraction utilities..."
-xbps-install -y zip unzip xz
+xbps-install -y zip unzip xz 7zip
 echo "+) Installing system utilities..."
-xbps-install -y htop tmux hdparm nload
+xbps-install -y htop hdparm
 echo "+) Installing 'hacking' tools..."
 xbps-install -y bvi
 
 echo "[*]: Installing applications..."
 echo "+) Installing desktop environment..."
-xbps-install -y xfce4 arc-theme
+xbps-install -y xfce4
 echo "+) Installing several desktop applications..."
-xbps-install -y firefox torbrowser-launcher vlc gimp rhythmbox qbittorrent
+xbps-install -y firefox torbrowser-launcher vlc gimp qbittorrent
 echo "+) Installing gnupg and git..."
 xbps-install -y gnupg git
-echo "+) Installing octoxbps (xbps frontend)..."
-xbps-install -y octoxbps
 echo "+) Installing vim (text editor)..."
 xbps-install -y vim
 echo "+) Installing go (Go development tool)..."
@@ -69,7 +67,5 @@ ln -s /etc/sv/dbus "$rsv/"
 ln -s /etc/sv/NetworkManager "$rsv/"
 echo "- Unsetting variables..."
 unset rsv
-echo "+) Setting up octoxbps-notifier..."
-ln -s /usr/share/applications/octoxbps-notifier.desktop /etc/xdg/autostart
 
 echo "Post-installation script has finished all tasks."
