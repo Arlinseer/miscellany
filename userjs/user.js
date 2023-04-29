@@ -252,6 +252,8 @@ user_pref("browser.shell.shortcutFavicons", false);
 // show-experimental(4): Show experimental features.
 user_pref("browser.preferences.experimental", true);
 user_pref("browser.preferences.experimental.hidden", true);
+// show-viewimageinfo(4): Show "View Image Info" button.
+user_pref("browser.menu.showViewImageInfo", true);
 
 // [Section 7]: Further prevent online tracking.
 // http-referer-policy(2): Configure HTTP referer policies.

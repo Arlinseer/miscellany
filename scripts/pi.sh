@@ -69,5 +69,7 @@ ln -s /etc/sv/dbus "$rsv/"
 ln -s /etc/sv/NetworkManager "$rsv/"
 echo "- Unsetting variables..."
 unset rsv
+echo "+) Setting GPG_TTY variable..."
+printf "\n# Set by post-installation script\nexport GPG_TTY=\$(tty)\n" >> ~/.bashrc
 
 echo "Post-installation script has finished all tasks."
