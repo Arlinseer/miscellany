@@ -40,7 +40,7 @@ echo "[*]: Installing applications..."
 echo "+) Installing desktop environment..."
 xbps-install -y xfce4
 echo "+) Installing several desktop applications..."
-xbps-install -y firefox torbrowser-launcher vlc gimp qbittorrent
+xbps-install -y firefox torbrowser-launcher vlc gimp qbittorrent rhythmbox
 echo "- Uninstalling parole..."
 xbps-remove -Fy parole
 echo "+) Installing gnupg and git..."
