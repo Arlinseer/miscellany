@@ -41,6 +41,8 @@ echo "+) Installing desktop environment..."
 xbps-install -y xfce4
 echo "+) Installing several desktop applications..."
 xbps-install -y firefox torbrowser-launcher vlc gimp qbittorrent rhythmbox
+echo "- Installing additional rhythmbox dependencies..."
+xbps-install -y gst-plugins-good1
 echo "- Uninstalling parole..."
 xbps-remove -Fy parole
 echo "+) Installing gnupg and git..."
