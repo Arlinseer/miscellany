@@ -24,7 +24,7 @@ echo "[*]: Installing low-level packages..."
 echo "+) Installing audio and video packages..."
 xbps-install -y pipewire alsa-pipewire alsa-utils xorg-minimal \
 	xorg-input-drivers xorg-video-drivers noto-fonts-ttf \
-	noto-fonts-cjk noto-fonts-emoji font-go-ttf
+	noto-fonts-cjk noto-fonts-emoji
 echo "+) Installing networking and fetching utilities..."
 xbps-install -y NetworkManager curl wget
 echo "+) Installing elogind..."
